@@ -5,7 +5,7 @@ title: 目录
 <h2 class="text-center">{{ page.title }}</h2>
 <div class="text-center">
     <dl>
-    {% for post in site.posts %}
+    {% for post in site.posts reversed %}
     　<dd>
         {{ post.date | date_to_string }}
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
