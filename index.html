@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>首页</title>
-    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.0/css/bootstrap.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.js"></script>
-    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.js"></script>
-</head>
-<body>
-    <div class='text-center text-success' style="margin-top: 10%;">
-        <font size="20px;">guobailing oh la la</font>
-    </div>
-</body>
-</html>
+---
+layout: default
+title: 我的Blog
+---
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+    {% for post in site.posts %}
+    　<li>{{ post.date | date_to_string }}
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+</ul>
