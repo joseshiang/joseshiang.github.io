@@ -2,16 +2,18 @@
 layout: default
 title: 我的Blog首页
 ---
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-    {% for post in site.posts %}
-    　<li>
-        {{ post.date | date_to_string }}
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-</ul>
-<p>图片</p>
-<image href=""></image>
-<div class="text-center">{{site.time}}</div>
+<div class="text-center">
+    <h2>{{ page.title }}</h2>
+    <p>最新文章</p>
+    <ul>
+        {% for post in site.posts %}
+        　<li>
+            {{ post.date | date_to_string }}
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+    </ul>
+    <p>图片</p>
+    <image href="{{ /images/404-bg.jpg | prepend : site.baseurl}}"></image>
+    <div class="text-center">{{site.time | date: '%Y-%M-%d %HH:%mm:%ss'}}</div>
+</div>
