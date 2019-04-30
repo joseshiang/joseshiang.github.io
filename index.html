@@ -4,15 +4,15 @@ title: 我的Blog首页
 ---
 <h2 class="text-center">{{ page.title }}</h2>
 <div class="text-center">
-    <ul>
+    <dl>
     {% for post in site.posts %}
-    　<li>
+    　<dd>
         {{ post.date | date_to_string }}
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </li>
+      </dd>
     {% endfor %}
-    </ul>
+    </dl>
     <p>图片</p>
-    <image href="{{ /images/404-bg.jpg | prepend : site.baseurl}}"></image>
+    <image href="{{ '/images/404-bg.jpg' | prepend : site.baseurl}}"></image>
     <div class="text-center">{{site.time | date: '%Y-%m-%d %h:%M:%s'}}</div>
 </div>
