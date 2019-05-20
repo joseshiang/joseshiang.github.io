@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<!--页面头部-->
-{% include head.html %}
-<body>
-    <!--导航栏-->
-    {% include nav.html %}
-    <!--内容-->
-    {{content}}
-    <!--页面底部-->
-    {% include footer.html %}
-</body>
-</html>
+---
+layout: base
+---
+
+<div class="intro-header"></div>
+
+<div role="main" class="container">
+  {{ content }}
+</div>
