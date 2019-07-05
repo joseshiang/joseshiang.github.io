@@ -1,17 +1,16 @@
 ---
 layout: default
-title: 目录
+title: 目录大纲
 ---
 <!--页面内容-->
 <h2 class="text-center">{{ page.title }}</h2>
 <div class="text-center">
   <dl>
     {% for post in site.posts reversed %}
-    　<dd>
-    {{ post.date | date_to_string }}
-    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-  </dd>
+  　<dd>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </dd>
     {% endfor %}
   </dl>
-  <image style="width: 45%;height: 50%;" src="{{ '/images/404-bg.jpg' | prepend : site.baseurl}}"></image>
+  <!--<image style="width: 45%;height: 50%;" src="{{ '/images/404-bg.jpg' | prepend : site.baseurl}}"></image>-->
 </div>
