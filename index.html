@@ -5,12 +5,12 @@ title: 目录大纲
 <!--页面内容-->
 <h2 class="text-center">{{ page.title }}</h2>
 <div class="text-center">
-  <dl>
+  <ul>
     {% for post in site.posts reversed %}
-  　<dd>
+  　<li>
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </dd>
+    </li>
     {% endfor %}
-  </dl>
+  </ul>
   <!--<image style="width: 45%;height: 50%;" src="{{ '/images/404-bg.jpg' | prepend : site.baseurl}}"></image>-->
 </div>
